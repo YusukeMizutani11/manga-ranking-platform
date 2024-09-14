@@ -1,5 +1,5 @@
 import express from 'express';
-import pool from '../database'; // Assume you have a database connection set up in src/db.ts
+import pool from '../database';
 
 const router = express.Router();
 
