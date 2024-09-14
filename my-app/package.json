@@ -2,25 +2,38 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev -p 3002",
     "build": "next build",
     "start": "next start",
+    "server": "nodemon --exec tsx src/server.ts",
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^14.2.6",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@auth0/nextjs-auth0": "^3.5.0",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "pg": "^8.12.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "socket.io": "^4.7.5"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.16.1",
+    "@types/pg": "^8.11.9",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/socket.io": "^3.0.2",
+    "dotenv": "^16.4.5",
     "eslint": "^8",
     "eslint-config-next": "14.2.6",
+    "next": "^14.2.6",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5.5.4"
   }
 }
