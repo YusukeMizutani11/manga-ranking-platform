@@ -11,8 +11,11 @@ const httpServer = createServer(app);
 const PORT = process.env.PORT;
 const io = new Server(httpServer);
 
+app.use(express.json()); // Middleware to parse JSON request bodies
 
-app.use('/api', mangaRoutes);
+app.use('/api/manga', mangaRoutes);
+// app.use('/api/users', userRoutes);
+// app.use('/api/reviews', reviewRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hi, Y');
